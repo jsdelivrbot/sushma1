@@ -1,0 +1,48 @@
+<html>
+<style>
+img { position: relative;
+	  top: 1%;
+	  left: 33%;
+	  width: 350px;
+	  height: 100px;
+}
+</style>
+<head>
+ <img src="/sibi.png">
+</head>
+<body style="background-color:Black">
+  <div class="container" style="color:black;">		  
+  <font color="grey">
+	<h2>USER DETAILED DESCRIPTION</h2>
+	<ul>
+		<% results.forEach(function(r) { %>
+			<li>Name : <%= r.title %><%= r.givenname %> <%= r.middleinitial %>  <%= r.surname %></li>		
+			<li>Gender : <%= r.gender %> </li>
+			<li>Name Set : <%= r.nameset %> </li>
+			<li>Given name : <%= r.givenname %> </li>
+			<li>Street Address : <%= r.streetaddr %> </li>
+			<li>City : <%= r.city %> </li>
+			<li>State : <%= r.statefull %> </li>
+			<li>Zip code : <%= r.zipcode %> </li>
+			<li>Country : <%= r.countryfull %> </li>
+			<li>Email : <%= r.email %> </li>
+			<li>Username : <%= r.username %> </li>
+			<li>Password : <%= r.password %> </li>
+			<li>Telephone : <%= r.telephonecode %>-<%= r.telephone %> </li>
+			<li>Mother's maiden : <%= r.mothersmaiden %> </li>
+			<li>Birthday : <%= r.birthday %> </li>
+			<li>Age : <%= r.age %> </li>			
+			<li>Occupation : <%= r.occupation %> </li>
+			<li>Company : <%= r.company %> </li>			
+			<li>Vehicle : <%= r.vehicle %> </li>
+			<li>Domain : <%= r.domain %> </li>
+			<li> Latitude/Longitude : <%= r.latitude%>/<%= r.longitude %> </li>
+		<% }); %>
+	</ul>
+  </font>
+  </div>
+  <div style="align:center;"> 
+  <a href="/">Home</a>
+  </div>
+</body>
+</html>
